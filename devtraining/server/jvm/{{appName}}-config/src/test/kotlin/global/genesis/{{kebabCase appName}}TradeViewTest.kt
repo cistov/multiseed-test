@@ -15,7 +15,7 @@ import org.junit.Before
 import org.junit.Test
 import javax.inject.Inject
 
-class {{paramCase appName}}TradeViewTest : AbstractDatabaseTest() {
+class {{kebabCase appName}}TradeViewTest : AbstractDatabaseTest() {
     @Inject
     lateinit var enhancedTradeViewRepository: TradeViewAsyncRepository
 
