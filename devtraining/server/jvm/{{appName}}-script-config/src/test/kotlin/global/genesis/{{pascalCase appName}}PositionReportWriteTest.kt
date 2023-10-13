@@ -9,7 +9,7 @@ import global.genesis.testsupport.GenesisTestConfig
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
-class {{kebabCase appName}}PositionReportWriteTest : AbstractGenesisTestSupport<GenesisSet>(
+class {{pascalCase appName}}PositionReportWriteTest : AbstractGenesisTestSupport<GenesisSet>(
     GenesisTestConfig {
         addPackageName("global.genesis.eventhandler.pal")
         genesisHome = "/GenesisHome/"

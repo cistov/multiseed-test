@@ -17,7 +17,7 @@ import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
 
-class {{kebabCase appName}}EventHandlerTest : AbstractGenesisTestSupport<GenesisSet>(
+class {{pascalCase appName}}EventHandlerTest : AbstractGenesisTestSupport<GenesisSet>(
     GenesisTestConfig {
         packageName = "global.genesis.eventhandler.pal"
         genesisHome = "/GenesisHome/"

@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty1
 
-class {{kebabCase appName}}DataServerTradeTest : DataServerTest<Trade>(
+class {{pascalCase appName}}DataServerTradeTest : DataServerTest<Trade>(
     genesisHome = "/GenesisHome/",
     scriptFileName = "{{appName}}-dataserver.kts",
     initialDataFile = "data/TEST_DATA.csv",

@@ -17,7 +17,7 @@ import org.junit.Test
 import javax.inject.Inject
 import kotlin.test.assertEquals
 
-class {{kebabCase appName}}ConsolidatorTest : AbstractGenesisTestSupport<GenesisSet>(
+class {{pascalCase appName}}ConsolidatorTest : AbstractGenesisTestSupport<GenesisSet>(
   GenesisTestConfig {
     addPackageName("global.genesis.pal.consolidator")
     genesisHome = "/GenesisHome/"
