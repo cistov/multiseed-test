@@ -1,0 +1,57 @@
+<!--
+!
+!   System              : Genesis Business Library
+!   Sub-System          : multi-pro-code-test Configuration
+!   Version             : 1.0
+!   Copyright           : (c) Genesis
+!   Date                : 2022-03-18
+!   Function : Provide Process Definitions Config for multi-pro-code-test.
+!
+!   Modification History
+!
+-->
+<processes>
+    <process name="{{upperCase appName}}_DATASERVER">
+        <groupId>{{upperCase appName}}</groupId>
+        <start>true</start>
+        <options>-Xmx1024m -DXSD_VALIDATE=false</options>
+        <module>genesis-pal-dataserver</module>
+        <package>global.genesis.dataserver.pal</package>
+        <script>{{appName}}-dataserver.kts</script>
+        <description>Displays real-time details</description>
+        <language>pal</language>
+        <loggingLevel>DEBUG,DATADUMP_ON</loggingLevel>
+    </process>
+    <process name="{{upperCase appName}}_EVENT_HANDLER">
+        <groupId>{{upperCase appName}}</groupId>
+        <start>true</start>
+        <options>-Xmx256m -DRedirectStreamsToLog=true -DXSD_VALIDATE=false</options>
+        <module>genesis-pal-eventhandler</module>
+        <package>global.genesis.eventhandler.pal</package>
+        <script>{{appName}}-eventhandler.kts</script>
+        <description>Handles events</description>
+        <classpath>{{appName}}-messages*,{{appName}}-eventhandler*</classpath>
+        <language>pal</language>
+    </process>
+    <process name="{{upperCase appName}}_CONSOLIDATOR">
+        <groupId>{{upperCase appName}}</groupId>
+        <start>true</start>
+        <options>-Xmx256m -DRedirectStreamsToLog=true -DXSD_VALIDATE=false</options>
+        <module>genesis-pal-consolidator</module>
+        <package>global.genesis.pal.consolidator</package>
+        <script>{{appName}}-consolidator.kts</script>
+        <description>Consolidates trades to calculate positions</description>
+        <loggingLevel>DEBUG,DATADUMP_ON</loggingLevel>
+        <language>pal</language>
+    </process>
+    <process name="{{upperCase appName}}_EVALUATOR">
+        <start>true</start>
+        <groupId>{{upperCase appName}}</groupId>
+        <options>-Xmx512m -DXSD_VALIDATE=false</options>
+        <module>genesis-evaluator</module>
+        <primaryOnly>true</primaryOnly>
+        <package>global.genesis.eventhandler,global.genesis.evaluator</package>
+        <description>Dynamic/time rules engine</description>
+        <loggingLevel>DEBUG,DATADUMP_ON</loggingLevel>
+    </process>
+</processes>

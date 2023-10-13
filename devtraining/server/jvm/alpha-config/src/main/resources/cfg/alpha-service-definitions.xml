@@ -1,0 +1,18 @@
+<!--
+!
+!   System              : Genesis Business Library
+!   Sub-System          : multi-pro-code-test Configuration
+!   Version             : 1.0
+!   Copyright           : (c) Genesis
+!   Date                : 2022-03-18
+!   Function : Provide Service Definitions Config for multi-pro-code-test.
+!
+!   Modification History
+!
+-->
+<configuration>
+    <service host="localhost" name="{{upperCase appName}}_DATASERVER" port="11000"/>
+    <service host="localhost" name="{{upperCase appName}}_EVENT_HANDLER" port="11001"/>
+    <service host="localhost" name="{{upperCase appName}}_CONSOLIDATOR" port="11002"/>
+    <service host="localhost" name="{{upperCase appName}}_EVALUATOR" port="11003"/>
+</configuration>
