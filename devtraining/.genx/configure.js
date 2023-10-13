@@ -3,5 +3,4 @@
  */
 module.exports = async (data, utils) => {
   // populate additional data fields
-  data.appNameParamCase = '';
 };
