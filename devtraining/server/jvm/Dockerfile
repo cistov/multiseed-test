@@ -11,8 +11,8 @@ RUN if [ $(uname -m) = "x86_64" ] ; then (echo 'y' | yum install https://downloa
     yum -y install epel-release ;  \
     yum -y install lmdb ;  \
     ln -s /usr/lib64/liblmdb.so.0.0.0 /usr/lib64/liblmdb.so ; fi
-RUN yum -y install --nogpgcheck postgresql14-server
 RUN yum -y install dos2unix
+RUN yum -y install --nogpgcheck postgresql14-server
 RUN useradd {{appName}} &&\
     echo {{appName}}:{{appName}} | chpasswd &&\
     usermod -aG wheel {{appName}} &&\
