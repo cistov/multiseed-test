@@ -5,10 +5,6 @@ plugins {
 description = "{{appName}}-deploy"
 
 dependencies {
-    api(project(":{{appName}}-eventhandler"))
-    api(project(":{{appName}}-messages"))
-
-    /* dependencies required for building the docker image from the Gradle task */
     genesisServer(
         group = "global.genesis",
         name = "genesis-distribution",
@@ -25,10 +21,11 @@ dependencies {
     )
     genesisServer(project(":{{appName}}-distribution", "distribution"))
     genesisServer(project(":{{appName}}-site-specific", "distribution"))
-    genesisWeb("client:web")
-    /* --- */
+    genesisWeb(":client")
 
-    /* Add additional dependencies on other external distributions here */
+    api(project(":{{appName}}-eventhandler"))
+    api(project(":{{appName}}-messages"))
+    // Add additional dependencies on other external distributions here
 }
 tasks {
     copyDependencies {
