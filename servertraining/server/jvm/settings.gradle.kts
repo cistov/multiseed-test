@@ -45,9 +45,4 @@ include("{{appName}}-deploy")
 include("{{appName}}-site-specific")
 include("{{appName}}-file-handler")
 
-includeBuild("../../client") {
-    dependencySubstitution {
-        substitute(module("client:web"))
-            .using(project(":web"))
-    }
-}
+includeBuild("../../client")
