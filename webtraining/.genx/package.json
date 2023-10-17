@@ -1,0 +1,40 @@
+{
+  "name": "@cistov/webtraining-seed",
+  "description": "Web training seed",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "scripts": {},
+  "devDependencies": {},
+  "genxSeedConfig": {
+    "persistAnswers": true,
+    "processFiles": {
+      "exclude": [
+        ".git",
+        ".genx",
+        "node_modules",
+        ".gradle",
+        "gradle"
+      ],
+      "rename": true,
+      "interpolateVariables": {
+        "enabled": true,
+        "include": [
+          "Dockerfile",
+          "product-info",
+          ".yml",
+          ".sh",
+          ".csv",
+          ".json",
+          ".js",
+          ".kt",
+          ".kts",
+          ".ts",
+          ".md",
+          ".properties",
+          ".html",
+          ".xml"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+dependencies {
+    implementation("global.genesis:genesis-pal-execution")
+    compileOnly("global.genesis:genesis-dictionary")
+    api("global.genesis:genesis-pal-dataserver")
+    api("global.genesis:genesis-pal-requestserver")
+    api("global.genesis:genesis-pal-consolidator")
+    api("global.genesis:genesis-pal-streamer")
+    api("global.genesis:genesis-pal-streamerclient")
+    api("global.genesis:genesis-pal-camel")
+    api("org.apache.camel:camel-core")
+    api("global.genesis:genesis-pal-eventhandler")
+    api("global.genesis:genesis-dataserver2")
+    api(project(":{{appName}}-messages"))
+    api(project(":{{appName}}-eventhandler"))
+    api("global.genesis:genesis-pal-datapipeline")
+    compileOnly(project(path = ":{{appName}}-dictionary-cache", configuration = "codeGen"))
+    testCompileOnly(project(":{{appName}}-config"))
+    testImplementation("global.genesis:genesis-dbtest")
+    testImplementation("global.genesis:genesis-testsupport")
+    testImplementation("global.genesis:genesis-dataserver2")
+    testImplementation("global.genesis:genesis-pal-dataserver")
+    testImplementation(project(path = ":{{appName}}-dictionary-cache", configuration = "codeGen"))
+}
+
+description = "{{appName}}-script-config"
