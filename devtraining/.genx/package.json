@@ -23,6 +23,7 @@
           "product-info",
           ".yml",
           ".sh",
+          ".csv",
           ".json",
           ".js",
           ".kt",
