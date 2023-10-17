@@ -7,6 +7,8 @@ Useful Genx CLI params:
 * `--log-level verbose` enables debugging output
 * `--no-shell` allows to chain commands together
 
+https://learn.genesis.global/docs/operations/commands/genx-CLI/
+
 #### Dev training seed
 
 ```
