@@ -26,7 +26,7 @@ dependencies {
     )
     genesisServer(project(":{{appName}}-distribution", "distribution"))
     genesisServer(project(":{{appName}}-site-specific", "distribution"))
-    genesisWeb("client")
+    genesisWeb(":client")
     /* --- */
 
     api(project(":{{appName}}-file-handler"))
